@@ -1,39 +1,20 @@
 package week2.person;
 
-import java.util.UUID;
+import week2.enums.Qualifications;
+import week2.enums.UserRole;
 
-public class Person {
-    private String firstName;
-    private String lastName;
-    private UUID ID;
-    private Qualifications qualifications;
-    private UserRole role;
+public interface Person {
+    String getFirstName();
+    void setFirstName(String firstName);
 
-    public Person(String firstName, String lastName, UUID ID, Qualifications qualifications, UserRole role) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.ID = ID;
-        this.qualifications = qualifications;
-        this.role = role;
-    }
+    String getLastName();
+    void setLastName(String lastName);
 
-    public String getFirstName() {return firstName;}
+    String fullName();
 
-    public void setFirstName(String firstName) {this.firstName = firstName;}
+    Qualifications getQualifications();
+    void setQualifications(Qualifications qualifications);
 
-    public String getLastName() {return lastName;}
-
-    public void setLastName(String lastName) {this.lastName = lastName;}
-
-    public UUID getID() {return ID;}
-
-    public void setID(UUID ID) {this.ID = ID;}
-
-    public Qualifications getQualifications() {return qualifications;}
-
-    public void setQualifications(Qualifications qualifications) {this.qualifications = qualifications;}
-
-    public UserRole getRole() {return role;}
-
-    public void setRole(UserRole role) {this.role = role;}
+    UserRole getRole();
+    void setRole(UserRole role);
 }
