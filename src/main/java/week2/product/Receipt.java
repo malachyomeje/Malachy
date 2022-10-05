@@ -6,7 +6,4 @@ public class Receipt {
     public Product getProductDetails() {
         return productDetails;
     }
-
-
-
 }
