@@ -2,7 +2,7 @@ package week2.services;
 
 import week2.interfaces.CashierServiceInterface;
 
-public class CashierServiceInterfaceImpl implements CashierServiceInterface {
+public class CustomerService implements CashierServiceInterface {
 
     @Override
     public String sellProduct() {

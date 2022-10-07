@@ -37,10 +37,10 @@ public class Product{
 
     @Override
     public String toString(){
-       return productCategory + " "+
-               productID+ " "+
-               productName + " "+
-               productPrice + " "+
-               productQuantity;
+       return "Category: "+productCategory + " \n" +
+               "ID: "+productID+ " \n"+
+               "Item: "+productName + " \n"+
+               "Unit Price: "+productPrice + " \n"+
+               "Quantity: "+productQuantity;
     }
 }

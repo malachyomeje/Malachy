@@ -2,10 +2,9 @@ package week2.services;
 
 import week2.enums.Qualifications;
 import week2.enums.UserRole;
-import week2.interfaces.ManagerService;
 import week2.person.*;
 
-public class ManagerServiceImpl implements ManagerService {
+public class ManagerService implements week2.interfaces.ManagerService {
 
     @Override
     public String hireEmployee(Applicant applicant, UserRole role){
