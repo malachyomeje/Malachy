@@ -5,14 +5,15 @@ import week2.product.Store;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CashierServiceTest {
-
-   private  CustomerService buy = new CustomerService();
+class CustomerServiceTest {
+   private CustomerService buy = new CustomerService();
    private Store store = new Store();
    private Receipt receipt = new Receipt();
 
-   @Test
-    void returnsReceiptWhenPurchaseIsSuccessful(){
+
+
+    @Test
+    void shouldBuyProductOnlyIfproductExistInStoreAndCustomerHasEnoughMoney() {
         store.addItemsToStore();
         assertEquals("Here is your Receipt:\n" +
                         "**********************\n" +
@@ -20,10 +21,10 @@ class CashierServiceTest {
                         "ID: 1 \n" +
                         "Item: Samsung \n" +
                         "Unit Price: 200 \n" +
-                        "Quantity: 6\n" +
-                        "Total Price: 1200",
+                        "Quantity: 3\n" +
+                        "Total Price: 600",
 
-                buy.buyProduct(store.getMyproductList(),"samsung",979785773,6),
+                buy.buyProduct(store.getMyproductList(),"samsung",9863,3),
                 "Product out of Store or Insufficient funds");
     }
-    }
+}

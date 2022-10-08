@@ -1,11 +1,12 @@
 package week2.services;
+import week2.product.Product;
 
-import week2.interfaces.CashierServiceInterface;
+import java.util.List;
 
-public class CustomerService implements CashierServiceInterface {
-
-    @Override
-    public String sellProduct() {
-        return null;
+public class CustomerService{
+    public String buyProduct(List<Product> myNewProductList, String item, int price, int quantity){
+        CashierService serve = new CashierService();
+      String buy =   serve.sellItem(myNewProductList, item, price, quantity);
+      return buy;
     }
 }

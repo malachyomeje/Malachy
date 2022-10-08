@@ -10,8 +10,6 @@ public class CashierService {
             if (quantity <= 0)
                 throw new CartException("Quantity must be greater than zero");
 
-
-
         for (Product product: myNewProductList) {
             if ((item.equalsIgnoreCase(product.getProductName())))
 

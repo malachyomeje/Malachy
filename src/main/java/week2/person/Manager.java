@@ -2,16 +2,16 @@ package week2.person;
 
 public class Manager {
 
-    private PersonImpl manager;
+    private Person manager;
 
-    public Manager(PersonImpl manager) {
+    public Manager(Person manager) {
         this.manager = manager;
     }
-    public PersonImpl getManager() {
+    public Person getManager() {
         return manager;
     }
 
-    public void setManager(PersonImpl manager) {
+    public void setManager(Person manager) {
         this.manager = manager;
     }
 }

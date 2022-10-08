@@ -1,17 +1,17 @@
 package week2.person;
 
 public class Cashier {
-    private PersonImpl manager;
+    private Person cashier
+            ;
 
-    public Cashier(PersonImpl cashier) {
-        this.manager = cashier;
-    }
+    public Cashier(Person cashier) {this.cashier = cashier;}
 
-    public PersonImpl getCashier() {
-        return manager;
-    }
+    public Person getCashier() {return cashier;}
 
-    public void setCashierr(PersonImpl manager) {
-        this.manager = manager;
+    public void setCashierr(Person cashier) {this.cashier = cashier;}
+
+    @Override
+    public String toString(){
+        return ""+ cashier;
     }
 }

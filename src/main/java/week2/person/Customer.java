@@ -1,17 +1,19 @@
 package week2.person;
 
 public class Customer {
-    private PersonImpl customer;
+    private Person customer;
 
-    public Customer(PersonImpl customer) {
+    public Customer(Person customer) {
         this.customer = customer;
     }
 
-    public PersonImpl getCustomer() {
+    public Person getCustomer() {
         return customer;
     }
 
-    public void setCustomer(PersonImpl customer) {
+    public void setCustomer(Person customer) {
         this.customer = customer;
     }
+
+
 }

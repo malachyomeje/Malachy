@@ -1,17 +1,14 @@
 package week2.person;
 
+import week2.interfaces.PersonInterface;
+
 public class Applicant {
-    private Person applicant;
+    private PersonInterface applicant;
 
-    public Applicant(Person applicant) {
-        this.applicant = applicant;
-    }
+    public Applicant(PersonInterface applicant) {this.applicant = applicant;}
 
-    public Person getApplicant() {
-        return applicant;
-    }
+    public PersonInterface getApplicant() {return applicant;}
 
-    public void setApplicant(Person applicant) {
-        this.applicant = applicant;
-    }
+    public void setApplicant(PersonInterface applicant) {this.applicant = applicant;}
+
 }

@@ -1,4 +1,4 @@
-package week2.product;
+package week2.interfaces;
 
 public interface ProductInterface {
     String getProductCategory();

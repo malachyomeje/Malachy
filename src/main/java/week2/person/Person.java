@@ -1,20 +1,51 @@
 package week2.person;
 
-import week2.enums.Qualifications;
-import week2.enums.UserRole;
+import week2.enums.*;
+import week2.interfaces.PersonInterface;
 
-public interface Person {
-    String getFirstName();
-    void setFirstName(String firstName);
+public class Person implements PersonInterface {
+    private String firstName;
+    private String lastName;
+    private Qualifications qualifications;
+    private UserRole role;
+    private String address;
 
-    String getLastName();
-    void setLastName(String lastName);
 
-    String fullName();
 
-    Qualifications getQualifications();
-    void setQualifications(Qualifications qualifications);
+    public Person(String firstName, String lastName, Qualifications qualifications, UserRole role, String address) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.qualifications = qualifications;
+        this.role = role;
+        this.address = address;
+    }
 
-    UserRole getRole();
-    void setRole(UserRole role);
+    public String getFirstName() {return firstName;}
+    public void setFirstName(String firstName) {this.firstName = firstName;}
+
+    public String getLastName() {return lastName;}
+    public void setLastName(String lastName) {this.lastName = lastName;}
+
+    public String fullName(){
+        return firstName + " " +lastName;
+    }
+
+    public Qualifications getQualifications() {return qualifications;}
+    public void setQualifications(Qualifications qualifications) {this.qualifications = qualifications;}
+
+    public UserRole getRole() {return role;}
+    public void setRole(UserRole role) {this.role = role;}
+
+    public String getAddress() {return address;}
+    public void setAddress(String address) {this.address = address;}
+
+    public String toString(){
+        return "Profile{\n" +
+                "FirstName = " + firstName + ",  " +
+                "LastName =  " + lastName + "\n" +
+                "Qualification =     " + qualifications + ", " +
+                "Role =      " + role + "\n"+
+                "Address =   " + address+
+                '}';
+    }
 }
