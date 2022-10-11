@@ -1,29 +1,26 @@
 package week3.services;
 
 import org.junit.jupiter.api.Test;
+import week3.person.Customer;
+import week3.product.Cart;
 import week3.product.Store;
+import week3.product.StoreService;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CashierServiceTest {
+    Customer james  = new Customer("James","Benin City", 150_000);
+    Cart jamesCart = new Cart();
+    CustomerService customerService = new CustomerService();
+    CashierService cashierService = new CashierService();
+    StoreService storeService = new StoreService();
 
-   private  CustomerService buy = new CustomerService();
-   private Store store = new Store();
-   private Receipt receipt = new Receipt();
 
-   @Test
-    void returnsReceiptWhenPurchaseIsSuccessful(){
-        store.addItemsToStore();
-        assertEquals("Here is your Receipt:\n" +
-                        "**********************\n" +
-                        "Category: Phones \n" +
-                        "ID: 1 \n" +
-                        "Item: Samsung \n" +
-                        "Unit Price: 200 \n" +
-                        "Quantity: 6\n" +
-                        "Total Price: 1200",
 
-                buy.buyProduct(store.getMyproductList(),"samsung",979785773,6),
-                "Product out of Store or Insufficient funds");
+    @Test
+    void shouldReturnCartAddedToQueue() {
+        storeService.addItemsToStore();
+        customerService.orderItem(jamesCart,james,"macbook",15);
+        assertEquals("Cart added to Queue",customerService.addCartToQueue(jamesCart),"You cannot add empty cart to queue");
     }
-    }
+}

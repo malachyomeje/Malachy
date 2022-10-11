@@ -7,6 +7,7 @@ public class Product implements Comparable<Product>{
     private int productPrice;
     private int productQuantity;
 
+
     public Product(String productCategory, int productID, String productName, int productPrice, int productQuantity) {
         this.productCategory = productCategory;
         this.productID = productID;
@@ -28,13 +29,12 @@ public class Product implements Comparable<Product>{
 
     @Override
     public String toString(){
-       return "Category: "+productCategory + " \n" +
+       return "\nCategory: "+productCategory + " \n" +
                "ID: "+productID+ " \n"+
                "Item: "+productName + " \n"+
                "Unit Price: "+productPrice + " \n"+
-               "Quantity: "+productQuantity+"\n";
+               "Quantity: "+productQuantity+"\n\n";
     }
-
     @Override
     public int compareTo(Product product){
         if(this.productQuantity>product.productQuantity)

@@ -6,7 +6,6 @@ import week3.interfaces.ManagerServiceInterface;
 import week3.person.*;
 
 public class ManagerService implements ManagerServiceInterface {
-
     @Override
     public String hireEmployee(Applicant applicant, UserRole role){
 
