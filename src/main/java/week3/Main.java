@@ -43,8 +43,8 @@ public class Main {
         customerService.addCartToQueue(ekeneCart);
 
         Cart ucheCart = new Cart();
-        customerService.orderItem(ucheCart,ekene,"macbook", 1);
-        customerService.orderItem(ucheCart,ekene,"Samsung", 7);
+        customerService.orderItem(ucheCart,uche,"macbook", 1);
+        customerService.orderItem(ucheCart,uche,"Samsung", 7);
         customerService.addCartToQueue(ucheCart);
 
         //System.out.println(customerService.addCartToQueue(ucheCart));
