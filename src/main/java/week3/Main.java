@@ -43,8 +43,8 @@ public class Main {
         customerService.addCartToQueue(ekeneCart);
 
         Cart ucheCart = new Cart();
-        customerService.orderItem(ucheCart,ekene,"macbook", 91);
-        customerService.orderItem(ucheCart,ekene,"Samsung", 97);
+        customerService.orderItem(ucheCart,ekene,"macbook", 1);
+        customerService.orderItem(ucheCart,ekene,"Samsung", 7);
         customerService.addCartToQueue(ucheCart);
 
         //System.out.println(customerService.addCartToQueue(ucheCart));
@@ -60,7 +60,12 @@ public class Main {
         System.out.println(CashierService.getCheckOutPriorityQueue().size());
 
             //CALL CASHIER TO MAKE A SALE
-        System.out.println(cashierService.checkOut());
+        while(CashierService.getCheckOutPriorityQueue().size()>0) {
+            System.out.println(cashierService.checkOut());
+            System.out.println("**********************************");
+            CashierService.getCheckOutPriorityQueue().poll();
+        }
+
 
     }
 }
